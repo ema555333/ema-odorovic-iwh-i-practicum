@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1 Add New NBA Player
+    
+    form(action='/update-cobj', method='POST')
+      div.form-group
+        label(for='name') Player Name:
+        input#name(type='text', name='name', required)
+      
+      div.form-group
+        label(for='position') Position:
+        input#position(type='text', name='position', required)
+      
+      div.form-group
+        label(for='team') Team:
+        input#team(type='text', name='team', required)
+      
+      button(type='submit') Add Player
+    
+    a(href='/') Return to the homepage

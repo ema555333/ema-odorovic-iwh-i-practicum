@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1 NBA Players Database
+    a(href='/update-cobj') Add to this table
+    
+    if players && players.length > 0
+      table
+        thead
+          tr
+            th Name
+            th Position
+            th Team
+        tbody
+          each player in players
+            tr
+              td= player.properties.name
+              td= player.properties.position
+              td= player.properties.team
+    else
+      p No NBA players found. Add some using the link above!
