@@ -12,12 +12,14 @@ html
         thead
           tr
             th Name
+            th Number
             th Position
             th Team
         tbody
           each player in players
             tr
               td= player.properties.name
+              td= player.properties.number
               td= player.properties.position
               td= player.properties.team
     else
